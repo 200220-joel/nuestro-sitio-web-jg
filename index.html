@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Gordis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botones -->
+    <div class="contenedor-botones" id="botones">
+        <button class="boton" onclick="mostrarRamo()">Amor ❤️</button>
+        <button class="boton" onclick="mostrarFotos()">Nosotros</button>
+    </div>
+
+    <!-- Ramo de flores -->
+    <div class="ramo-container" id="ramoContainer">
+        <div class="ramo-unico">💐</div>
+        <div class="mensaje-amor">Para mi Gordis</div>
+        <button class="boton" onclick="ocultarRamo()" style="font-size: 1.2rem; padding: 12px 30px;">Volver</button>
+    </div>
+
+    <!-- Galería de fotos -->
+    <div class="fotos-container" id="fotosContainer">
+        <div class="galeria">
+            <img src="img/foto1.jpg" alt="Nosotros 1">
+            <img src="img/foto2.jpg" alt="Nosotros 2">
+            <img src="img/foto3.jpg" alt="Nosotros 3">
+        </div>
+        <button class="boton" onclick="ocultarFotos()">Volver</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

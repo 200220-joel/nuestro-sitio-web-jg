@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #87CEEB;
+    overflow: hidden;
+    position: relative;
+}
+
+.contenedor-botones {
+    text-align: center;
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+.boton {
+    padding: 20px 50px;
+    margin: 20px;
+    border: none;
+    border-radius: 35px;
+    background: linear-gradient(45deg, #FF6B6B, #FF8E8E);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-family: 'Dancing Script', cursive;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.boton:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.5);
+}
+
+/* Estilos para el ramo */
+.ramo-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.ramo-unico {
+    font-size: 12rem;
+    animation: flotar 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px #FF69B4);
+}
+
+.mensaje-amor {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: white;
+    margin: 30px 0;
+    text-shadow: 0 0 15px rgba(255, 107, 107, 0.9);
+}
+
+/* Estilos para la galería de fotos */
+.fotos-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.galeria {
+    display: flex;
+    gap: 20px;
+}
+
+.galeria img {
+    width: 200px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Animación de los corazones */
+.corazon {
+    position: absolute;
+    opacity: 0.5;
+    animation: caer 8s linear infinite;
+    pointer-events: none;
+    font-size: 2rem;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(-10vh) translateX(-10vw) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(110vh) translateX(10vw) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+
+
